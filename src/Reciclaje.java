@@ -25,9 +25,8 @@ public class Reciclaje {
 		Scanner in = new Scanner(System.in);
 
 		while (true) {
-
-			String tarjeta = Teclado.introducirTarjeta(in);
-			String contraseña = Teclado.introducirContraseña(in);
+			String tarjeta = Control.introducirTarjeta(in);
+			String contraseña = Control.introducirContraseña(in);
 
 			boolean login = Trabajador.verificarContraseña(trabajadores, tarjeta, contraseña);
 
@@ -43,9 +42,10 @@ public class Reciclaje {
 					elementos[elem].reciclarElemento();
 					System.out.println(elementos[elem].getNombre() + ": " + elementos[elem].getCantidad());
 					System.out.println("cantidad total: " + elementos[elem].getCantidadTot());
-
+					System.out.println("");
 				}
 			}
+			System.out.println("");
 		}
 
 	}
